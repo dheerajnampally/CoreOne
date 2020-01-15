@@ -17,8 +17,6 @@ namespace CoreOne.Controllers
             return new string[] { "value1", "value2" };
         }
 
-
-
         // GET api/values/5
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id)
@@ -30,6 +28,16 @@ namespace CoreOne.Controllers
         [HttpPost]
         public void Post([FromBody] string value)
         {
+            int[] tempArr = new int[] { 0, 1, 2, 3, 5, 8, 13 };
+            for(int i = 0; i <tempArr.Length; i++)
+            {
+                Console.WriteLine(tempArr[i]);
+            }
+            foreach(int i in tempArr)
+            {
+                Console.WriteLine(tempArr[i]);
+            }
+           
         }
 
         // PUT api/values/5
